@@ -4,9 +4,6 @@ cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
 :: build
 cargo install --locked --root "%PREFIX%" --path . || goto :error
 
-:: strip debug symbols
-strip "%PREFIX%\bin\typos.exe" || goto :error
-
 :: remove extra build file
 del /F /Q "%PREFIX%\.crates.toml"
 
