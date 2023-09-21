@@ -2,7 +2,7 @@
 cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
 
 :: build
-cargo install --locked --root "%PREFIX%" --path . || goto :error
+cargo install --locked --root "%PREFIX%" typos-cli || goto :error
 
 :: strip debug symbols
 strip "%PREFIX%\bin\typos.exe" || goto :error
