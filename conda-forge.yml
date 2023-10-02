@@ -6,4 +6,8 @@ conda_forge_output_validation: true
 github:
   branch_name: main
   tooling_branch_name: main
+bot:
+  version_updates:
+    sources:
+      - github
 test: native_and_emulated
