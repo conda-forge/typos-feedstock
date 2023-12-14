@@ -1,5 +1,5 @@
 :: check licenses
-cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+cargo-bundle-licenses --format yaml --output THIRDPARTY.yml || goto :error
 
 :: build
 cargo install --locked --root "%PREFIX%" typos-cli || goto :error
