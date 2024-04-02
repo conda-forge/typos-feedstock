@@ -199,6 +199,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@DamianB-BitFlipper](https://github.com/DamianB-BitFlipper/)
 * [@DamianBarabonkovQC](https://github.com/DamianBarabonkovQC/)
 * [@pavelzw](https://github.com/pavelzw/)
 
