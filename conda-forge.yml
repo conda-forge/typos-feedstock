@@ -1,15 +1,9 @@
 bot:
+  automerge: true
   version_updates:
-    sources:
-    - github
-build_platform:
-  osx_arm64: osx_64
-  linux_aarch64: linux_64
-  linux_ppc64le: linux_64
-conda_build:
-  error_overlinking: true
+    sources: [github]
+build_platform: {linux_aarch64: linux_64, linux_ppc64le: linux_64, osx_arm64: osx_64}
+conda_build: {error_overlinking: true}
 conda_forge_output_validation: true
-github:
-  branch_name: main
-  tooling_branch_name: main
+github: {branch_name: main, tooling_branch_name: main}
 test: native_and_emulated
