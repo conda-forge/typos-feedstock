@@ -1,4 +1,4 @@
-{% set version = "1.20.9" %}
+{% set version = "1.20.10" %}
 
 package:
   name: typos
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/crate-ci/typos/archive/v{{ version }}.tar.gz
-  sha256: b5ed9bac5e9bb1c7fd46c566b2ede2eb5ac1e410c49e14127e2d44a706df27ee
+  sha256: d9fa88f6e74c3801e72cd0e77401d49973bfdf63dfd17902b3fc5120a0a32af8
 
 build:
   number: 0
@@ -15,7 +15,9 @@ requirements:
   build:
     - {{ compiler('rust') }}
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("c") }}                # [win]
     - cargo-bundle-licenses
 
 test:
