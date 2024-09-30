@@ -16,6 +16,7 @@ requirements:
     - {{ compiler('rust') }}
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
+    - binutils
     - cargo-bundle-licenses
 
 test:
