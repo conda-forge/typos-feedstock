@@ -2,15 +2,11 @@
 
 set -o xtrace -o nounset -o pipefail -o errexit
 
+export CARGO_PROFILE_RELEASE_STRIP=symbols
+
 cargo-bundle-licenses \
     --format yaml \
     --output THIRDPARTY.yml
 
 # build statically linked binary with Rust
-cargo install --locked --root "$PREFIX" typos-cli
-
-# strip debug symbols
-"$STRIP" "$PREFIX/bin/typos"
-
-# remove extra build file
-rm -f "${PREFIX}/.crates.toml"
+cargo install --no-track --locked --root "$PREFIX" typos-cli

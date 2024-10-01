@@ -9,15 +9,13 @@ source:
   sha256: dc9a5699dd7576435f94896952102361aa9139a0d672d6101369c0880beade67
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - {{ compiler('rust') }}
-    - {{ compiler('c') }}              # [not win]
-    - {{ stdlib("c") }}                # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
-    - {{ stdlib("c") }}                # [win]
+    - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - cargo-bundle-licenses
 
 test:
