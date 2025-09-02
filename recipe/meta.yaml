@@ -1,4 +1,4 @@
-{% set version = "1.35.7" %}
+{% set version = "1.35.8" %}
 
 package:
   name: typos
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/crate-ci/typos/archive/v{{ version }}.tar.gz
-  sha256: b8782fa21c283f824f9c9d6f27398064d7c0cbb6bb392d2df930dfd83297b77d
+  sha256: a354818ad67974cc7a45ed33aee17b51f66d59771f2d6b5a4f15471e94dae948
 
 build:
   number: 0
