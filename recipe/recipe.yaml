@@ -30,6 +30,7 @@ requirements:
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
     - cargo-bundle-licenses
+    - cargo-auditable
 
 tests:
   - script:
