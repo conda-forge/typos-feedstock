@@ -13,6 +13,16 @@ source:
 
 build:
   number: 1
+  env:
+    CARGO_PROFILE_RELEASE_STRIP: symbols
+    CARGO_PROFILE_RELEASE_LTO: fat
+  content:
+    - if: unix
+      then:
+        - cargo auditable install --locked --no-track --bins --root ${{ PREFIX }} --path .
+      else:
+        - cargo auditable install --locked --no-track --bins --root %LIBRARY_PREFIX% --path .
+    - cargo-bundle-licenses --format yaml --output ./THIRDPARTY.yml
 
 requirements:
   build:
@@ -24,9 +34,13 @@ requirements:
 tests:
   - script:
       - typos --help
+  - package_contents:
+      bin:
+        - typos
+      strict: true
 
 about:
-  license: MIT
+  license: MIT OR Apache-2.0
   license_file:
     - LICENSE-MIT
     - LICENSE-APACHE
