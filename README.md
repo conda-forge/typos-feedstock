@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/typos-feedstock
 
 Home: https://github.com/crate-ci/typos
 
-Package license: MIT
+Package license: MIT OR Apache-2.0
 
 Summary: Source code spell checker
 
