@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.45.2"
+  version: "1.46.0"
 
 package:
   name: typos
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/crate-ci/typos/archive/v${{ version }}.tar.gz
-  sha256: 38e111a6c358b92977eb6592f4f7dc3b01920341c8c852f5eb2f2003126b3b7a
+  sha256: 268459bd3b03d4e6c398280ade11d5280850fdb392ed50d3c67e41ddfa083dbc
 
 build:
   number: 0
